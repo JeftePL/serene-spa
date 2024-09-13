@@ -1,0 +1,11 @@
+@use './generic/reset.scss';
+@use './generic/normalize.scss';
+
+@use './abstract/base';
+
+@use './components/navbar';
+@use './components/banner';
+@use './components/services';
+@use './components/discounts';
+@use './components/curiosities';
+@use './components/footer';

@@ -1,0 +1,7 @@
+@mixin gradient-bg($side, $colors...) {
+  @if $side == left {
+    background: linear-gradient(to left, $colors);
+  } @else {
+    background: linear-gradient(to right, $colors);
+  }
+}

@@ -1,0 +1,29 @@
+@use 'sass:math';
+@use '../abstract/variables';
+
+.banner {
+  background: url(../img/banner.jpg) 27% center no-repeat;
+  min-height: 80vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  padding: 0 1.5625rem;
+  &__text {
+    padding: 3rem;
+    background-color: variables.$quartenary-color;
+    opacity: 0.9;
+    text-align: center;
+    &-title {
+      font-family: variables.$secondary-font;
+      font-size: variables.$text-base-size;
+      @media screen and (max-width: 991px) {
+        font-size: math.div(variables.$text-base-size, 1.5);
+      }
+    }
+    &-subtitle {
+      font-size: math.div(variables.$text-base-size, 2);
+    }
+  }
+}

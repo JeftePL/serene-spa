@@ -1,0 +1,48 @@
+@use 'sass:math';
+@use '../abstract/variables';
+
+.curiosities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @media screen and (max-width: 991px) {
+    flex-direction: column;
+  }
+  &__img {
+    width: 50%;
+    object-position: center;
+    object-fit: cover;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
+  }
+  &__text {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 991px) {
+      width: auto;
+    }
+    &-title {
+      color: variables.$secondary-color;
+      font-family: variables.$secondary-font;
+      font-size: math.div(variables.$text-base-size, 2.5);
+      font-weight: 300;
+    }
+    &-subtitle {
+      color: variables.$tertiary-color;
+      font-size: math.div(variables.$text-base-size, 2);
+      font-weight: 300;
+      margin: 1rem;
+    }
+    &-description {
+      line-height: 1.2;
+      color: variables.$secondary-color;
+      max-width: 540px;
+    }
+  }
+}

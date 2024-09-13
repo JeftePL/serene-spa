@@ -1,0 +1,11 @@
+@use 'sass:math';
+@use '../abstract/_variables.scss';
+@use '../tools/mixins.scss';
+
+.footer {
+  text-align: center;
+  font-size: math.div(variables.$text-base-size, 3.5);
+  color: variables.$quartenary-color;
+  padding: 1.2rem;
+  @include mixins.gradient-bg(right, variables.$secondary-color, variables.$tertiary-color);
+}

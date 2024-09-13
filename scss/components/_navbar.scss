@@ -1,0 +1,27 @@
+@use '../abstract/variables';
+
+.nav {
+  text-align: center;
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @media screen and (max-width: 360px) {
+      flex-direction: column;
+    }
+    &-item {
+      display: inline-block;
+      padding: 1rem;
+      &-link {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+        color: variables.$secondary-color;
+        &:hover {
+          border-bottom: 2px solid variables.$tertiary-color;
+        }
+      }
+    }
+  }
+}

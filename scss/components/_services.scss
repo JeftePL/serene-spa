@@ -1,0 +1,62 @@
+@use 'sass:math';
+@use '../abstract/variables';
+
+.services {
+  padding: 5rem;
+  @media screen and (max-width: 991px) {
+    padding: 3rem 1.5625rem;
+  }
+  &__title {
+    font-family: variables.$secondary-font;
+    font-size: math.div(variables.$text-base-size, 2.5);
+    color: variables.$tertiary-color;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin: 1rem;
+  }
+  &__subtitle {
+    text-align: center;
+    font-size: math.div(variables.$text-base-size, 1.2);
+    margin-bottom: 2rem;
+    font-weight: 300;
+    @media screen and (max-width: 991px) {
+      font-size: math.div(variables.$text-base-size, 1.5);
+    }
+  }
+  &__cards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+    }
+  }
+  &__card {
+    width: 33%;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
+    &-image-container {
+      padding-bottom: 0.125rem;
+      border-bottom: 6px solid variables.$tertiary-color;
+    }
+    &-image {
+      width: 100%;
+    }
+    &-title {
+      font-family: variables.$secondary-font;
+      font-size: math.div(variables.$text-base-size, 2);
+      font-weight: 300;
+      margin-top: 1.5625rem;
+      margin-bottom: 1.25rem;
+      color: variables.$secondary-color;
+    }
+    &-description {
+      font-size: math.div(variables.$text-base-size, 3);
+      font-weight: 300;
+      color: variables.$secondary-color;
+      line-height: 1.25rem;
+    }
+  }
+}
