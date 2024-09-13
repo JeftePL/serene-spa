@@ -1,6 +1,6 @@
 # Serene SPA
 
-Landing page of a SPA page
+Landing page of a SPA
 
 ## Getting Started
 
